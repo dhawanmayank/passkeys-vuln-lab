@@ -47,7 +47,12 @@ Open your browser at [http://localhost:5000](http://localhost:5000)
 ### Option 1: Docker CLI
 ```bash
 docker build -t passkeys-vuln-lab .
+
+# Run the Flask app container
 docker run -p 5000:5000 passkeys-vuln-lab
+
+# In another terminal, run the evil server container (using Python image)
+docker run -p 1337:1337 -v $(pwd)/evil:/evil python:3.10-slim python -m http.server 1337 -w /evil
 ```
 
 ### Option 2: Docker Compose
@@ -87,6 +92,8 @@ passkeys-vuln-lab/
 ├── templates/
 │   ├── flag.html
 │   └── flag_summary.html
+├── evil/
+│   └── index.html
 ├── Dockerfile
 ├── docker-compose.yml
 ├── .dockerignore

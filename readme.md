@@ -101,6 +101,6 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## 🙌 Credits
-Developed by **Mayank** for BSides Bangalore 2025.
+Developed by **Mayank Dhawan** for BSides Bangalore 2025.
 
-> "Passkeys are lying to you... until you exploit them right."
+> "Passkeys Are Lying to You: Real-World Exploits in WebAuthn Implementations"

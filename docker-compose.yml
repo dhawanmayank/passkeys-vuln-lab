@@ -1,7 +1,26 @@
-version: '3'
+version: '3.8'
+
 services:
   app:
     build: .
+    container_name: passkeys-vuln-lab
     ports:
       - "5000:5000"
-    container_name: passkeys-vuln-lab
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+      - SECRET_KEY=super-secret-key
+    command: ["python", "app/main.py"]
+    restart: unless-stopped
+
+  evil:
+    image: python:3.10-slim
+    container_name: evil-localhost
+    working_dir: /evil
+    volumes:
+      - ./evil:/evil
+    ports:
+      - "1337:1337"
+    command: python -m http.server 1337
+    restart: unless-stopped

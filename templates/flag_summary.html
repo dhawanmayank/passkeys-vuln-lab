@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flag Summary</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    ul {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      color: #34495e;
+    }
+    .flag-key {
+      font-weight: bold;
+      color: #2980b9;
+    }
+    .flag-value {
+      color: #d35400;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Flag Summary</h1>
+  <ul>
+    {% for key, value in flags.items() %}
+      <li><span class="flag-key">{{ key }}</span><span class="flag-value">{{ value }}</span></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

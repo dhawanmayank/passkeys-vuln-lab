@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vulnerability Flag</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .flag-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+      text-align: center;
+    }
+    .flag-box h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .flag {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d35400;
+      background: #fcefe3;
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="flag-box">
+    <h1>🎯 Exploit Successful!</h1>
+    <div class="flag">{{ flag }}</div>
+  </div>
+</body>
+</html>
